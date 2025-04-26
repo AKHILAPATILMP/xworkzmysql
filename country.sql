@@ -1,4 +1,6 @@
-drop table country_info;
+
+create database country;
+use country;
 CREATE TABLE country_info (
     country_id INT,
     name VARCHAR(100),

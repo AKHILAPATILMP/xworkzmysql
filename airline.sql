@@ -1,4 +1,6 @@
-drop table airlines_info;
+
+create database airlines;
+use airlines;
 CREATE TABLE airlines_info (
     airline_id INT,
     name VARCHAR(100),

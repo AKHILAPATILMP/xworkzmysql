@@ -1,4 +1,6 @@
-drop table state_info;
+
+create database states;
+use states;
 CREATE TABLE state_info (
     state_id INT,
     name VARCHAR(100),
