@@ -1,3 +1,5 @@
+
+use airlines;
 drop table airlines_info;
 CREATE TABLE airlines_info (
     airline_id INT,
@@ -48,4 +50,103 @@ INSERT INTO airlines_info VALUES
 (19, 'Turkish Airlines', 'Turkey', 1933, 340, 'Ahmet Bolat', 'Istanbul', 'Yes'),
 (20, 'Thai Airways', 'Thailand', 1960, 100, 'Chai Eamsiri', 'Bangkok', 'Yes');
 
-select * from airlines_info;
+UPDATE airlines_info 
+SET ceo_name = 'Rahul Sharma' 
+WHERE airline_id = 1;
+
+UPDATE airlines_info 
+SET ceo_name = 'Vikram Singh' 
+WHERE airline_id = 2;
+
+UPDATE airlines_info 
+SET ceo_name = 'Anil Mehra' 
+WHERE airline_id = 3;
+
+UPDATE airlines_info 
+SET ceo_name = 'Suresh Reddy' 
+WHERE airline_id = 4;
+
+UPDATE airlines_info 
+SET ceo_name = 'Deepak Kumar' 
+WHERE airline_id = 5;
+
+UPDATE airlines_info 
+SET headquarters = 'Bangalore' 
+WHERE airline_id = 7;
+
+UPDATE airlines_info 
+SET headquarters = 'Chennai' 
+WHERE airline_id = 6;
+
+UPDATE airlines_info 
+SET fleet_size = 100 
+WHERE airline_id = 8;
+
+UPDATE airlines_info 
+SET headquarters = 'Delhi' 
+WHERE airline_id = 3;
+
+UPDATE airlines_info 
+SET is_active = 'Yes' 
+WHERE airline_id = 5;
+
+SELECT * FROM airlines_info 
+WHERE airline_name = 'IndiGo';
+
+SELECT * FROM airlines_info 
+WHERE base_country = 'India';
+
+SELECT * FROM airlines_info 
+WHERE founded_year > 2000;
+
+SELECT * FROM airlines_info 
+WHERE fleet_size > 100;
+
+SELECT * FROM airlines_info 
+WHERE is_active = 'Yes';
+
+SELECT * FROM airlines_info 
+WHERE base_country = 'India' 
+AND founded_year > 2000;
+
+SELECT * FROM airlines_info 
+WHERE base_country = 'India' 
+OR headquarters = 'Dubai';
+
+SELECT * FROM airlines_info 
+WHERE airline_id IN (1, 2, 3);
+
+SELECT * FROM airlines_info 
+WHERE airline_id NOT IN (1, 2, 3);
+
+SELECT * FROM airlines_info 
+WHERE founded_year BETWEEN 1950 AND 2000;
+
+SELECT * FROM airlines_info 
+WHERE founded_year NOT BETWEEN 1950 AND 2000;
+
+DELETE FROM airlines_info 
+WHERE airline_id = 20;
+
+DELETE FROM airlines_info 
+WHERE base_country = 'India' 
+AND fleet_size < 50;
+
+DELETE FROM airlines_info 
+WHERE base_country = 'India' 
+OR headquarters = 'Dubai';
+
+DELETE FROM airlines_info 
+WHERE airline_id IN (1, 2, 3);
+
+DELETE FROM airlines_info 
+WHERE airline_id NOT IN (1, 2, 3);
+
+DELETE FROM airlines_info 
+WHERE fleet_size BETWEEN 100 AND 200;
+
+DELETE FROM airlines_info 
+WHERE founded_year NOT BETWEEN 1950 AND 2000;
+
+SELECT * FROM airlines_info;
+
